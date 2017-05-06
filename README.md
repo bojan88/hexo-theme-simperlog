@@ -9,7 +9,7 @@ Simple responsive personal blog theme for [Hexo](http://hexo.io)
 1. Get it from Git
 ```
 cd [your project root]/themes
-git clone https://github.com/bojan88/Simperlog simperlog
+git clone git@github.com:bojan88/hexo-theme-simperlog.git simperlog
 ```
 2. Make changes to the root _config.yml
   * Change theme - `theme: simperlog`
