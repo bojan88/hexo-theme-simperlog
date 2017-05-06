@@ -95,6 +95,7 @@ $article-share-link
     text-shadow: 0 1px darken(color-google, 20%)
 
 .article-gallery
+  background: #000
   position: relative
 
 .article-gallery-photos
@@ -102,8 +103,13 @@ $article-share-link
   overflow: hidden
 
 .article-gallery-img
+  display: none
   max-width: 100%
-  display: block
+  &:first-child
+    display: block
+  &.loaded
+    position: absolute
+    display: block
   img
     display: block
     max-width: 100%
