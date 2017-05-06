@@ -1,0 +1,85 @@
+.article
+  .article-meta
+    margin-bottom: 10px
+
+.article-share-link
+  cursor: pointer
+  &:before
+    content: "\f064"
+    font-family: fontawesome
+    padding-right: 6px
+
+.article-footer
+  clearfix()
+  text-align: center
+  font-size: 0.85em
+  line-height: 0.85em
+  border-top: 1px solid border-color
+  padding-top: 0.85em
+  margin: 0 5px 5px
+  a
+    color: lighten(dark-text-color, 30%)
+    text-decoration: none
+    &:hover
+      color: dark-text-color
+
+.article-share-box
+  position: absolute
+  display: none
+  background: #ddd
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2)
+  border-radius: 3px
+  margin-left: -145px
+  z-index: 1
+  transform: translateX(50%);
+  &.on
+    display: block
+
+$article-share-link
+  width: 50px
+  height: 36px
+  display: block
+  float: left
+  position: relative
+  color: #999
+  text-shadow: 0 1px #fff
+  &:before
+    font-size: 20px
+    line-height: 20px
+    font-family: fontawesome
+    absolute-center(@font-size)
+    text-align: center
+  &:hover
+    color: lighten(dark-text-color, 90%) !important
+
+.article-share-twitter
+  @extend $article-share-link
+  &:before
+    content: "\f099"
+  &:hover
+    background: color-twitter
+    text-shadow: 0 1px darken(color-twitter, 20%)
+
+.article-share-facebook
+  @extend $article-share-link
+  &:before
+    content: "\f09a"
+  &:hover
+    background: color-facebook
+    text-shadow: 0 1px darken(color-facebook, 20%)
+
+.article-share-pinterest
+  @extend $article-share-link
+  &:before
+    content: "\f0d2"
+  &:hover
+    background: color-pinterest
+    text-shadow: 0 1px darken(color-pinterest, 20%)
+
+.article-share-google
+  @extend $article-share-link
+  &:before
+    content: "\f0d5"
+  &:hover
+    background: color-google
+    text-shadow: 0 1px darken(color-google, 20%)

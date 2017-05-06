@@ -1,0 +1,35 @@
+#header
+  color: light-font-color
+  background-color: dark-bck-color
+  >div
+    height: 120px
+    display: flex
+    @media mq-mobile
+      flex-direction: column
+      text-align: center
+      padding-bottom: 30px
+      .flex-spacer
+        display: none;
+    .title
+      padding-top: 20px
+      >a
+        color: #c9cacc
+        text-decoration: none
+        h1
+          font-size: 24px
+          font-weight: bold
+          margin: 0
+    .nav
+      >div
+        padding-top: 20px
+        font-size: 18px
+        display: flex
+        >a
+          padding: 0 10px
+          border-right: 1px dotted link-color
+          flex: 1
+          color: link-color
+          text-decoration: none
+          &:last-child
+            padding-right: 0
+            border: none

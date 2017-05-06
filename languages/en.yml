@@ -1,0 +1,13 @@
+about: About
+comments: Comments
+blog: Blog
+projects: Projects
+read_more: Read More...
+powered_by: Powered by
+contact: Contact
+contact_widget:
+  before_email: Feel free to
+  email: send me an email
+  after_email: anytime
+about_widget:
+  text: "Hello, <br>This is where you would write something short about yourself"

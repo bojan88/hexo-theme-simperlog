@@ -1,0 +1,97 @@
+@import "nib"
+@import "_variables"
+@import "_mixin"
+
+html, body
+  margin: 0
+  padding: 0
+
+html
+  height: 100%
+
+body
+  min-height: 100%
+  display: flex
+  flex-direction: column
+  background-color: #eee
+
+.flex-spacer
+  flex: 1
+
+.card
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  margin: .5rem 0 1rem 0;
+  border-radius: 1px
+  background-color: #fff
+  padding: 14px
+  >.title
+    border-bottom: 1px solid border-color
+    h3
+      margin-bottom: 0
+
+.pull-right
+  float: right
+
+.pull-left
+  float: left
+
+.border-bottom
+  border-bottom: 1px solid border-color
+
+time
+  color: #666
+  font-size: 14px
+  margin-bottom: 5px
+
+a
+  color: link-color
+  text-decoration: none
+
+@import "_partial/header"
+@import "_partial/index"
+@import "_partial/article"
+@import "_partial/sidebar"
+@import "_partial/footer"
+
+#container
+  flex: 1
+  display: flex
+  flex-direction: column;
+  >.outer
+    >*
+      position: relative
+      top: -33px
+      margin-bottom: -68px
+
+#header, #footer
+  padding-left: 10px
+  padding-right: 10px
+
+#main
+  margin-right: 10px
+  @media mq-lt-desktop
+    margin-left: 10px
+    margin-bottom: 0 !important
+#sidebar
+  @media mq-lt-desktop
+    margin: 0 10px -68px 10px
+
+.outer
+  max-width: 1200px
+  padding: 0 20px
+  margin: auto
+  display: flex
+  width: 100%;
+  flex: 1
+  @media mq-lt-desktop
+    display: block
+    padding: 0
+
+  #main
+    flex: 1
+
+  &.sidebar
+    #main
+      flex: 70
+    #sidebar
+      flex: 30

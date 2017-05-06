@@ -1,0 +1,16 @@
+<header id="header">
+  <div class="outer">
+    <div class="title">
+      <a href="<%- url_for() %>" id="logo"><h1><%= config.title %></h1></a>
+      <div><%= config.subtitle %></div>
+    </div>
+    <div class="flex-spacer"></div>
+    <nav class="nav">
+      <div>
+        <% for (var i in theme.menu){ %>
+          <a href="<%- url_for(theme.menu[i]) %>" class="nav-link"><%= i %></a>
+        <% } %>
+      </div>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,14 @@
+menu:
+  Blog: /
+  About: /about
+
+# rigth sidebar
+sidebar: true
+widgets:
+- about
+- contact
+
+comments:
+  disqus_shortname:
+
+google_analytics:

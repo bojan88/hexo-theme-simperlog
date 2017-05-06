@@ -1,0 +1,24 @@
+<% page.posts.each(function(post){ %>
+  <div class="post card">
+    <div class="title">
+      <a href="<%= post.permalink %>">
+        <h3><%= post.title %></h3>
+      </a>
+      <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time>
+    </div>
+    <div class="content">
+      <%- post.excerpt %>
+      <p></p>
+      <a href="<%= post.permalink %>"><%= __('read_more') %></a>
+    </div>
+  </div>
+<% }) %>
+<% if (page.total > 1) { %>
+  <nav id="page-nav" class="card">
+    <%- paginator({
+      prev_text: `<i class="fa fa-chevron-left" aria-hidden="true"></i>`,
+      next_text: '<i class="fa fa-chevron-right" aria-hidden="true"></i>',
+      mid_size: 1
+    }) %>
+  </nav>
+<% } %>
