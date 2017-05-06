@@ -1,8 +1,8 @@
 <% page.posts.each(function(post){ %>
   <div class="post card">
-    <div class="title">
+    <div class="border-bottom">
       <a href="<%= post.permalink %>">
-        <h3><%= post.title %></h3>
+        <h1 class="article-title "><%= post.title %></h1>
       </a>
       <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time>
     </div>

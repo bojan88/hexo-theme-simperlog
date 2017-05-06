@@ -1,10 +1,13 @@
 @import "nib"
 @import "_variables"
 @import "_mixin"
+@import "_extend"
+
+// global-reset()
 
 html, body
-  margin: 0
-  padding: 0
+  font-family: 'Roboto', sans-serif;
+  color: dark-text-color
 
 html
   height: 100%
@@ -47,11 +50,22 @@ a
   color: link-color
   text-decoration: none
 
+.left, .alignleft
+  float: left
+
+.right, .alignright
+  float: right
+
+.clear
+  clear: both
+
+
 @import "_partial/header"
 @import "_partial/index"
 @import "_partial/article"
 @import "_partial/sidebar"
 @import "_partial/footer"
+@import "_partial/highlight"
 
 #container
   flex: 1
