@@ -4,7 +4,7 @@
     <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
     <div class="outer <% if (theme.sidebar) { %>sidebar<% } %>">
       <section id="main"><%- body %></section>
-      <% if (theme.sidebar){ %>
+      <% if (theme.sidebar && page.sidebar !== false){ %>
         <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
       <% } %>
     </div>
