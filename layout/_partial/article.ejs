@@ -14,13 +14,15 @@
     <div class="article-entry" itemprop="articleBody">
       <%- post.content %>
     </div>
-    <footer class="article-footer">
-      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
-      <%- partial('post/share-box', {url: post.permalink}) %>
-      <% if (post.comments && config.disqus_shortname){ %>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
-      <% } %>
-    </footer>
+    <% if (!isPage) { %>
+      <footer class="article-footer">
+        <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
+        <%- partial('post/share-box', {url: post.permalink}) %>
+        <% if (post.comments && config.disqus_shortname){ %>
+          <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
+        <% } %>
+      </footer>
+    <% } %>
   </div>
 </article>
 
