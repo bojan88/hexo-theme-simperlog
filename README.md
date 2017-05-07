@@ -1,6 +1,8 @@
 # Simperlog Hexo theme
 Simple responsive personal blog theme for [Hexo](http://hexo.io)
 
+[Demo](https://bojan88.github.io/simperlog/)
+
 ### General
 * Author: Bojan Djurdjevic
 * Compatibility: Hexo 3 or latter
