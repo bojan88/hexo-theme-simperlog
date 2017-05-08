@@ -14,6 +14,7 @@
 
 .article-share-link
   cursor: pointer
+  float: right
   &:before
     content: "\f064"
     font-family: fontawesome
@@ -21,7 +22,6 @@
 
 .article-footer
   clearfix()
-  text-align: center
   font-size: 0.85em
   line-height: 0.85em
   border-top: 1px solid border-color
@@ -33,6 +33,13 @@
     &:hover
       color: dark-text-color
 
+.article-tag-list-item
+  float: left
+  margin-right: 10px
+  color: lighten(dark-text-color, 60%)
+  &:before
+    content: "#"
+
 .article-share-box
   position: absolute
   display: none
@@ -41,7 +48,6 @@
   border-radius: 3px
   margin-left: -145px
   z-index: 1
-  transform: translateX(50%);
   &.on
     display: block
 

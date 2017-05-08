@@ -16,6 +16,7 @@
     </div>
     <% if (!isPage) { %>
       <footer class="article-footer">
+        <%- partial('post/tag') %>
         <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
         <%- partial('post/share-box', {url: post.permalink}) %>
       </footer>

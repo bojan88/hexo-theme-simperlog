@@ -13,7 +13,7 @@
       encodedUrl = encodeURIComponent(url),
       offset = {
         top: evt.target.offsetTop - 10,
-        left: evt.target.offsetLeft - (Math.round(evt.target.getBoundingClientRect().width / 2))
+        left: evt.target.offsetLeft
       };
 
       shareBox.style.top = offset.top + 'px';
