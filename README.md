@@ -16,7 +16,14 @@ git clone git@github.com:bojan88/hexo-theme-simperlog.git simperlog
 2. Make changes to the root _config.yml
   * Change theme - `theme: simperlog`
   * Add email - `email: you@example.com`
+  * Add disqus and analytics values
+  ```
+# Comments
+disqus_shortname:
+
+# Analytics
+google_analytics:
+  ```
 3. Make changes to the theme _config.yml
   * Set up navigation
-  * Add disqus and analytics values
 4. Change text in language files in `themes/simperlog/languages/`
