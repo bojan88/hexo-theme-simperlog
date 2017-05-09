@@ -26,4 +26,15 @@
   <script defer src="https://use.fontawesome.com/a49b4f783c.js"></script>
   <script defer src="//code.jquery.com/jquery-3.2.1.min.js" onload="jqueryLoaded()"></script>
   <script defer src="<%= url_for('/js/script.js') %>"></script>
+
+  <% if(theme.fancybox) { %>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+    <script type="text/javascript">
+    window.addEventListener("message", function(msg) {
+      if(msg.data === 'jquery-load') {
+        $('head').append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />');
+      }
+    });
+    </script>
+  <% } %>
 </head>

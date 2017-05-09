@@ -7,3 +7,5 @@ sidebar: true
 widgets:
 - about
 - contact
+
+fancybox: true
