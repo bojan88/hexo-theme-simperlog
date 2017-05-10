@@ -1,6 +1,6 @@
 menu:
   Blog: /
-  About: /about
+  About: /about/
 
 # rigth sidebar
 sidebar: true
