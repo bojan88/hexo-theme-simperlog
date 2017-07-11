@@ -83,7 +83,7 @@ function replace(html) {
 
 function* replaceGenerator(html) {
   var match;
-  var cssLinkPatt = /<link.+href=["|'](.+)["|']>/g;
+  var cssLinkPatt = /<link.+?href=["|'](.+?\.css)["|']>/g;
   while(match = cssLinkPatt.exec(html)) {
     if(cssFiles[match[1]]) {
       yield Promise.resolve(cssFiles[match[1]]).then(htmlReplace).catch(console.error);
